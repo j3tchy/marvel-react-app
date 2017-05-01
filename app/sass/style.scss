@@ -13,10 +13,10 @@ p {
   margin: 0 auto;
 }
 
-.img-responsive {
-  max-width: 100%;
-  display: block;
-}
+// .img-responsive {
+//   max-width: 100%;
+//   display: block;
+// }
 
 body {
   font-family: sans-serif;
@@ -24,29 +24,73 @@ body {
 
 
 
+// .character-list {
+//   list-style: none;
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: space-around;
+//
+//   li {
+//     width: 200px;
+//     margin-bottom: 30px;
+//     cursor: pointer;
+//
+//     .character-avatar-wrapper {
+//       width: 200px;
+//       height: 170px;
+//       overflow: hidden;
+//     }
+//
+//     .character-name {
+//       color: #FFFFFF;
+//       background-color: #d30000;
+//       text-align: center;
+//       padding: 10px 0;
+//       font-size: 0.9em;
+//     }
+//   }
+// }
+
 .character-list {
   list-style: none;
+  padding: 0;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
+  flex-wrap: wrap;
 
-  li {
-    width: 200px;
-    margin-bottom: 30px;
-    cursor: pointer;
+  .character {
+    width: 24%;
+    overflow: hidden;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    margin-bottom: 10px;
+
+    &:hover {
+      opacity: 0.8;
+    }
 
     .character-avatar-wrapper {
-      width: 200px;
-      height: 170px;
       overflow: hidden;
+      height: 250px;
+
+      .character-avatar {
+        width: 250px;
+        height: 250px;
+      }
+    }
+
+    a {
+      text-decoration: none;
     }
 
     .character-name {
-      color: #FFFFFF;
       background-color: #d30000;
+      text-transform: uppercase;
+      padding: 7px;
+      font-size: 0.7em;
+      color: #FFFFFF;
+      height: 40px;
       text-align: center;
-      padding: 10px 0;
-      font-size: 0.9em;
     }
   }
 }
@@ -58,6 +102,11 @@ body {
     width: 250px;
     float: left;
     margin-right: 30px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
   }
 }
 
@@ -72,4 +121,11 @@ body {
   .main-nav-item {
     margin-right: 15px;
   }
+}
+
+.main-footer {
+  text-align: center;
+  margin-top: 7px;
+  padding: 7px 0;
+  
 }

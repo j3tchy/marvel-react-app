@@ -12,6 +12,7 @@ var CharacterList = require('./CharacterList');
 var CharacterDetails = require('./CharacterDetails');
 
 var About = require('./About');
+var Footer = require('./Footer');
 var Nav = require('./Nav');
 
 var Characters = function(){
@@ -37,7 +38,9 @@ class App extends React.Component {
             <Route path='/characters' component={Characters} />
             <Route path="/about" component={About} />
           </Switch>
+          <Footer />
         </div>
+
       </Router>
     )
   }

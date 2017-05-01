@@ -13,7 +13,7 @@ function CharacterDetailsBanner(props){
           className="img-responsive"
           />
       </div>
-      <p>Name: {character.name}</p>
+      <h1>{character.name}</h1>
       {!character.description
       ? <p>No data available</p>
       : <p>About: {character.description}</p>}
