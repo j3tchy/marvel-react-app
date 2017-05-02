@@ -97,16 +97,23 @@ body {
 
 .character-details-banner {
   margin: 30px;
+  overflow: hidden;
 
   .character-details-image-wrapper {
-    width: 250px;
+    // width: 250px;
+    width: 45%;
     float: left;
-    margin-right: 30px;
+    margin-right: 5%;
     overflow: hidden;
 
     img {
       width: 100%;
     }
+  }
+
+  .character-details-copy {
+    float: left;
+    width: 50%;
   }
 }
 
@@ -124,8 +131,49 @@ body {
 }
 
 .main-footer {
+  clear:both;
   text-align: center;
   margin-top: 7px;
   padding: 7px 0;
-  
+
+}
+
+.search {
+  overflow: hidden;
+  margin-bottom: 10px;
+
+  &-input {
+    width: 85%;
+    border: 1px solid #CCCCCC;
+    float: left;
+    padding: 5px;
+  }
+
+  &-btn {
+    width: 12%;
+    float: right;
+    border: 1px solid #CCCCCC;
+    line-height: 2;
+    font-weight: 600;
+  }
+}
+
+.character-comics-details {
+  border-top: 1px solid #CCCCCC;
+  padding-top: 20px;
+
+  .character-comics,
+  .character-series {
+    @media screen and (min-width: 768px){
+      width: 50%;
+      float: left;
+    }
+  }
+
+  .character-comics-list {
+    list-style: none;
+    &-item {
+      margin: 10px 0;
+    }
+  }
 }

@@ -2,7 +2,9 @@ var React = require('react');
 var PropTypes = require('prop-types');
 
 var Loading = require('./Loading');
+
 var CharacterDetailsBanner = require('./CharacterDetailsBanner');
+var CharacterDetailsComics = require('./CharacterDetailsComics');
 
 var api = require('../utils/api');
 
@@ -36,6 +38,7 @@ class CharacterDetails extends React.Component {
           ? <Loading />
           : <CharacterDetailsBanner character={this.state.character}/>
         }
+        <CharacterDetailsComics character={this.state.character} />
       </div>
     )
   }

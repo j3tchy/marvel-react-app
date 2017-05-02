@@ -4,9 +4,12 @@ var PropTypes = require('prop-types');
 var api = require('../utils/api');
 
 var CharacterPreview = require('./CharacterPreview');
+
 var Loading = require('./Loading');
 
 var Link = require('react-router-dom').Link;
+
+
 
 function CharacterGrid(props){
   return (

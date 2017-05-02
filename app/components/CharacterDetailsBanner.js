@@ -13,10 +13,13 @@ function CharacterDetailsBanner(props){
           className="img-responsive"
           />
       </div>
-      <h1>{character.name}</h1>
-      {!character.description
-      ? <p>No data available</p>
-      : <p>About: {character.description}</p>}
+      <div className="character-details-copy">
+        <h1>{character.name}</h1>
+        {!character.description
+        ? <p>No data available</p>
+        : <p>About: {character.description}</p>}
+      </div>
+
     </div>
   )
 }
