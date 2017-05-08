@@ -10,7 +10,6 @@ var Loading = require('./Loading');
 var Link = require('react-router-dom').Link;
 
 
-
 function CharacterGrid(props){
   return (
     <div>

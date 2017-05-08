@@ -95,11 +95,11 @@ body {
   }
 }
 
-.character-details-banner {
+.details-banner {
   margin: 30px;
   overflow: hidden;
 
-  .character-details-image-wrapper {
+  .details-image-wrapper {
     // width: 250px;
     width: 45%;
     float: left;
@@ -111,9 +111,22 @@ body {
     }
   }
 
-  .character-details-copy {
+  .details-copy {
     float: left;
     width: 50%;
+
+    h1 {
+      margin-bottom: 7px;
+    }
+
+    ul {
+      padding: 10px;
+
+      li {
+        margin-bottom: 10px;
+        margin-left: 15px;
+      }
+    }
   }
 }
 
@@ -162,18 +175,28 @@ body {
   border-top: 1px solid #CCCCCC;
   padding-top: 20px;
 
-  .character-comics,
-  .character-series {
-    @media screen and (min-width: 768px){
-      width: 50%;
-      float: left;
-    }
+  .character-comics {
+    width: 100%;
   }
+
+  // .character-comics,
+  // .character-series {
+  //   @media screen and (min-width: 768px){
+  //     width: 50%;
+  //     float: left;
+  //   }
+  // }
 
   .character-comics-list {
     list-style: none;
     &-item {
       margin: 10px 0;
     }
+  }
+}
+
+.character-comics {
+  h3 {
+    margin-bottom: 7px;
   }
 }

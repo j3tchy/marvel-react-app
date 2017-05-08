@@ -1,15 +1,20 @@
 var React = require('react');
+var Link = require('react-router-dom').Link;
 
 function CharacterComicsList(props) {
   return (
     <div>
-      <ul className="character-comics-list">
-        {props.comics.items.map(function(comic, index){
+      {!props.comics.length
+      ? <p>No data available</p>
+      : <ul className="character-comics-list">
+        {props.comics.map(function(comic, index){
           return (
-            <li className="character-comics-list-item" key={index}>{comic.name}</li>
+            <Link key={comic.id} to={"/comics/" + comic.id}>
+              <li className="character-comics-list-item" key={comic.id}>{comic.title}</li>
+            </Link>
           )
         })}
-      </ul>
+      </ul>}
     </div>
   )
 }

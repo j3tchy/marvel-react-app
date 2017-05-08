@@ -3,7 +3,7 @@ var PropTypes = require('prop-types');
 
 var Loading = require('./Loading');
 
-var CharacterDetailsBanner = require('./CharacterDetailsBanner');
+var DetailsBanner = require('./DetailsBanner');
 var CharacterDetailsComics = require('./CharacterDetailsComics');
 
 var api = require('../utils/api');
@@ -13,20 +13,22 @@ class CharacterDetails extends React.Component {
     super(props);
 
     this.state = {
-      character: null
+      character: null,
+      comics: null
     }
   }
 
   componentDidMount(){
     var userId = this.props.match.params.number;
-      api.fetchCharactersDetails(userId)
-        .then(function(obj){
-          this.setState(function() {
-            return {
-              character: obj
-            }
-          })
-        }.bind(this))
+    api.fetchCharacterDetails(userId)
+      .then(function(obj) {
+        this.setState(function() {
+          return {
+            character: obj.profile,
+            comics: obj.comics
+          }
+        })
+      }.bind(this))
   }
 
 
@@ -36,16 +38,16 @@ class CharacterDetails extends React.Component {
       <div>
         {!characterDetails
           ? <Loading />
-          : <CharacterDetailsBanner character={this.state.character}/>
+          : <DetailsBanner data={this.state.character}/>
         }
-        <CharacterDetailsComics character={this.state.character} />
+        <CharacterDetailsComics comics={this.state.comics} />
       </div>
     )
   }
 }
 
-CharacterDetailsBanner.propTypes = {
-  character: PropTypes.object.isRequired
-}
+// DetailsBanner.propTypes = {
+//   data: PropTypes.object.isRequired
+// }
 
 module.exports = CharacterDetails;
